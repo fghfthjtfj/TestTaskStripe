@@ -1,6 +1,6 @@
 0.Сайт уже доступен с моего тестового сервера по адресу - http://31.56.222.250
 
-Доступ к админке в файле creeds.txt
+Доступ к админке в файле creds.txt
 
 1.Скачайте проект git clone https://github.com/fghfthjtfj/TestTaskTT.git
 
