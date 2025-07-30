@@ -1,4 +1,4 @@
 Admin panel:
-URL: https://ваш-сайт/admin/
+URL: https:/31.56.222.250/admin/
 Username: admin
 Password: 123456
