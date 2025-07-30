@@ -6,6 +6,8 @@ services:
     image: my-django-test
     container_name: django-test
     working_dir: /app/src
+    env_file:
+      - .env
     volumes:
       - staticfiles:/app/src/staticfiles
     command: >
