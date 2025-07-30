@@ -1,0 +1,39 @@
+- model: main.discount
+  pk: 1
+  fields:
+    name: 5% скидка
+    stripe_id: mqOSGNFq
+    currency: usd
+- model: main.discount
+  pk: 2
+  fields:
+    name: 10% скидка
+    stripe_id: hdS5siYe
+    currency: rub
+- model: main.tax
+  pk: 1
+  fields:
+    name: 1% налог
+    stripe_id: txr_1RqKlhRpU4gJwcUMwuMdFHER
+    currency: usd
+- model: main.item
+  pk: 1
+  fields:
+    name: Зубная щётка
+    description: Мягкая щётка
+    price: 1.0
+    currency: usd
+- model: main.item
+  pk: 2
+  fields:
+    name: Покрышка
+    description: Летняя
+    price: 5000.0
+    currency: rub
+- model: main.item
+  pk: 3
+  fields:
+    name: Занавеска
+    description: Тёмная
+    price: 999.0
+    currency: rub

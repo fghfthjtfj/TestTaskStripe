@@ -1,0 +1,44 @@
+{% load static %}
+{% load get_item %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+
+</head>
+<body>
+    <header>
+        <div class="vertical-div" style="background-color: cornsilk;">
+            <div class="horizontal-div">
+                <p style="font-size: 26px; margin-top: 0;">Корзина</p>
+                <button id="cart-buy" class="btn">К оплате</button>
+            </div>
+            <p class="cart-count">Число товаров {{ cart.items_count }}</p>
+            <div class="cart-item-list">
+                {% for item in cart.items %}
+                    <div class="horizontal-div">
+                        <p class="cart-item">
+                            Товар {{ item.name }} за {{ item.price }} {{ item.currency }} {{ cart.quantities|get_item:item.id }} шт.
+                        </p>
+                        <form method="post" action="{% url 'main:cart_manage' item.id %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="_action" value="delete">
+                            <button type="submit" class="cross-btn">X</button>
+                        </form>
+                        </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </header>
+    <main>
+        {% block item %}{% endblock %}
+    </main>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="{% static 'main/js/main.js' %}"></script>
+
+</body>
+</html>

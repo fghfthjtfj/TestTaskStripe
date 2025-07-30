@@ -1,0 +1,68 @@
+.item-obj{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 25%;
+
+}
+
+.item-card{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn{
+    padding: 8px 12px;
+    border: 1px solid #333;
+    background: #f7f7f7;
+    margin: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn.disabled{
+    color: #ccc;
+    border-color: #eee;
+    pointer-events: none;
+}
+
+.cross-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.carl-item-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.vertical-div{
+    width: max-content;
+    padding: 20px;
+    border-radius: 5%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.horizontal-div{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}

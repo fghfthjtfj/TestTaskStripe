@@ -1,0 +1,32 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block item %}
+    <div class="item-obj vertical-div" style="background-color: lightgrey;">
+        <div class="item-card">
+            <h1>{{ item.name }}</h1>
+            <p>{{ item.description }}</p>
+            <p>{{ item.price }} {{ item.currency }}</p>
+            <div class="vertical-div">
+                <form method="post" action="{% url 'main:cart_manage' item.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn">Добавить в корзину</button>
+
+                </form>
+                <button type="submit" id="item-buy" class="btn" data-item-id="{{ item.id }}">Купить сейчас</button>
+            </div>
+        </div>
+        <div class="horizontal-div">
+            {% if prev_item %}
+                <a href="{% url 'main:item_detail' prev_item.id %}" class="btn">← Назад</a>
+            {% else %}
+                <span class="btn disabled">← Назад</span>
+            {% endif %}
+
+            {% if next_item %}
+                <a href="{% url 'main:item_detail' next_item.id %}" class="btn">Вперёд →</a>
+            {% else %}
+                <span class="btn disabled">Вперёд →</span>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

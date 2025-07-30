@@ -1,0 +1,4 @@
+Admin panel:
+URL: https://ваш-сайт/admin/
+Username: admin
+Password: 123456
